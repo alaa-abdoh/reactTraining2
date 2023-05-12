@@ -1,24 +1,43 @@
-import logo from './logo.svg';
 import './App.css';
-
+import Header from "./Components/Header"
+import Bar from "./Components/Bar"
+import About from "./Components/about"
+import Products from "./Components/products"
+import Add from "./Components/addProduct"
+import View from './Components/View';
+import Edit from './Components/Edit';
+import { Route, Routes } from 'react-router-dom';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <>
+      <Header/>
+     
+        <div className='page'>
+          <Bar/>
+          <div className='content'>
+            <Routes>
+              <Route path="about" element={<About/>}/>
+              <Route path="/" element={<h1>You are in home</h1>}/>
+              {/* <Route path="products" element={<Products/>}/>
+              <Route path="products/add" element={<Add/>}/>
+              <Route path="/products/view/:id" element={<View/>}/> */}
+              
+              {/* Another Way  */}
+
+              <Route path="products">
+                <Route index element={<Products />} />
+                <Route path="add" element={<Add />} />
+                <Route path="view/:id" element={<View />} />
+                <Route path="edit/:id" element={<Edit />} />
+            </Route>
+              
+
+            </Routes>
+          </div>
+        </div>
+    </>
+
   );
 }
 

@@ -1,38 +1,72 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header{
   display: flex;
-  flex-direction: column;
+  background-color: #eee;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 10px;
+}
+.header a{
+  background-color: black;
+  padding: 7px;
   color: white;
+  border-radius: 8px;
 }
-
-.App-link {
-  color: #61dafb;
+.page{
+  display: flex;
+  align-items: stretch;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.bar{
+  background-color: #eee;
+  min-height: calc(100vh - 73.24px); /*73.24 is height of header*/
+}
+.bar li {
+  padding: 10px ;
+  background-color: #ccc;
+  margin: 10px;
+}
+.bar li a{
+  color: black;
+}
+ul{
+  list-style-type: none;
+  padding: 0;
+}
+.bar{
+  width:250px;
+}
+.content{
+  width: calc(100% - 200px);
+  padding: 50px;
+}
+.productsTable{
+  border: 1px solid #ddd;
+  width: 90%;
+  margin: 50px auto;
+}
+.productsTable td{
+  background-color: red;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.productsTable th{
+  background-color: #ddd;
+  padding: 5px;
+}
+.add{
+  color:white;
+  background-color: #333;
+  padding: 6px;
+}
+a{
+  text-decoration:none ;
+}
+form input,
+form textarea{
+  display: block;
+  width: 40%;
+  padding: 10px;
+  margin: 0 auto 25px;
 }

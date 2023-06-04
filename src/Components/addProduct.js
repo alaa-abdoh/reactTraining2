@@ -14,7 +14,7 @@ function Add(){
         event.preventDefault();
         fetch(" http://localhost:9000/products",{
             method:"post",
-            headers: { // must added
+            headers: { 
                 "Content-Type": "application/json",
             },
             body:JSON.stringify({
@@ -35,7 +35,7 @@ function Add(){
                 <input onBlur={(e)=>{setPrice(e.target.value)}} type="text" placeholder="Price"/>
                 <textarea onBlur={(e)=>{setDescription(e.target.value)}} type="text" placeholder="Description"/>
                 <input onBlur={(e)=>{setCategory(e.target.value)}} type="text" placeholder="Category"/>
-                <input onChange={(e)=>{setImage(e.target.value)}} type="file"/>
+                <input onChange={(e)=>{setImage(e.target.value)}} type="text" placeholder="path of image"/>
                 <input type="submit" value="add"/>
             </form>
             <Link to="/products">Back to Products</Link>
@@ -45,3 +45,9 @@ function Add(){
 }
 
 export default Add ;
+
+
+
+
+
+
